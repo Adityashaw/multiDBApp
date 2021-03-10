@@ -16,14 +16,14 @@ pip3 install -e .
 ## Steps to run/use this app:
 
 1. First export/set DATABASE_URL variable in your environment.
-Example command is given in next step.
+Example command is given in next step. Don't copy paste given secret key. Create your own.
 
 1. `cd` into repo. Then, depending on your OS
 
     1. For Linux, use command 
         ```
-        export DATABASE_URL_POSTGRESQL="postgresql://localhost/dbname"
-        export DATABASE_URL_MYSQL="mysql://adi:adimysql@localhost:3306/dbname"
+        export DATABASE_URL_POSTGRESQL="postgresql://user:pass@localhost/dbname"
+        export DATABASE_URL_MYSQL="mysql://user:pass@localhost:3306/dbname"
         export SECRET_KEY="3faf6054f65d7feb7c76f995fb940808"
         FLASK_APP=multidbapp FLASK_ENV=development flask run
         ```
