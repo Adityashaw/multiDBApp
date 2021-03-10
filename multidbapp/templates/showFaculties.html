@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{%block title %}
+Display Data
+{% endblock %}
+
+{%block navbar %}
+{% include 'nav2.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg container justify-content-center col-11 col-sm-9 col-md-6 col-lg-4 my-4">
+  <div>
+    <div class="card-body">
+      <h2 class="text-center"> Faculty Data </h2>
+      <table class="table table-bordered">
+        <tr>
+          <th> Id </th>
+          <th> Name </th>
+          <th> isAdmin </th>
+        </tr>
+        {% for faculty in faculties %}
+        <tr>
+          <td> {{ faculty.id }} </td>
+          <td> {{ faculty.name }} </td>
+          <td> {{ faculty.isAdmin }} </td> 
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

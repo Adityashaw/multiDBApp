@@ -1,0 +1,23 @@
+.legend-bar {
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 90%;
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        height: 33%;
+        top: 33%;
+    }
+    
+    &::before {
+        border-left: 1px solid #dee2e6;
+        left: 0;
+    }
+
+    &::after {
+        border-right: 1px solid #dee2e6;
+        right: 0;
+    }
+}

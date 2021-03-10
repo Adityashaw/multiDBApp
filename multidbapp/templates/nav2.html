@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark primary-gradient">
+    <div class="d-flex flex-grow-1 justify-content-between">
+        <div>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+        </div>
+        <div>
+            <a class="navbar-brand" tabindex="-1">
+            Hi,&nbsp;
+            {% if session.get('logged_in') %}<span>{{ session['uname'] }}</span>
+            {% else %}<span>Guest</span>
+            {% endif %}
+            </a>
+        </div>
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="justify-content collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

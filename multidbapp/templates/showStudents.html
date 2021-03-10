@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{%block title %}
+Display Data
+{% endblock %}
+
+{%block navbar %}
+{% include 'nav2.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg container justify-content-center col-11 col-sm-9 col-md-6 col-lg-4 my-4">
+  <div>
+    <div class="card-body">
+      <h2 class="text-center"> Student Data </h2>
+      <table class="table table-bordered">
+        <tr>
+          <th> Id </th>
+          <th> Name </th>
+          <th> Semester </th>
+          <th> Roll Number </th>
+        </tr>
+        {% for student in students %}
+        <tr>
+          <td> {{ student.id }} </td>
+          <td> {{ student.name }} </td>
+          <td> {{ student.semester }} </td>
+          <td> {{ student.roll_number }} </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,22 @@
+# ignore flask session(s)
+flask_session
+
+# virtual environment, if you are using
+.venv
+venv/
+
+# cache files
+__pycache__/
+
+# distribution / packaging
+*.egg-info/
+build/
+
+# result PDFs stored here
+openresult/generated_result/
+
+#vscode files
+.vscode/
+
+#aymuos files
+aymuos/

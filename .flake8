@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 100
+# E127 and E128 are for maintaining visual indent of multi-line strings. Not required.
+ignore = E127, E128
+
