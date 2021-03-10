@@ -51,6 +51,32 @@ Example command is given in next step. Don't copy paste given secret key. Create
 1. That's all!
 
 
+### If you haven't create tables yet, you can do like this
+
+1. In MySQL DB:
+  ```
+  CREATE TABLE faculty (
+  id          smallint(6) NOT NULL AUTO_INCREMENT, 
+  name        varchar(50) NOT NULL, 
+  isAdmin     boolean, 
+  CONSTRAINT fac_pkey_constraint 
+    PRIMARY KEY (id)) ENGINE=InnoDB;
+  ```
+
+1. In PostgreSQL DB:
+  ```
+  CREATE TABLE student (
+  id                  smallserial NOT NULL,
+  name                varchar(50) NOT NULL,
+  semester            smallint NOT NULL,
+  roll_number         varchar(15) NOT NULL UNIQUE,
+  CONSTRAINT stud_pkey_constraint
+    PRIMARY KEY (id));
+  ```
+
+1. Then insert some data into the above tables.
+
+
 ### Linters used in this project :
 
 1. Python Language Server (`pyls`) with `flake8`
